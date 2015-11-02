@@ -1,0 +1,7 @@
+[user]
+  name = Shinpei Kawahito
+  email = kawahito.shinpei@gmail.com
+[pull]
+  default = current
+[push]
+  default = current
