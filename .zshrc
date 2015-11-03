@@ -6,6 +6,11 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+# anaconda3
+if [ -d "$HOME/anaconda3" ]; then
+  export PATH="$HOME/anaconda3/bin:$PATH"
+fi
+
 # hub
 if [ -f /usr/local/bin/hub ]; then
   eval "$(hub alias -s)"
