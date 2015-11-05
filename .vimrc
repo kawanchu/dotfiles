@@ -12,7 +12,8 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'rking/ag.vim'
-NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'tomtom/tcomment_vim.git'
 
 call neobundle#end()
 filetype plugin indent on
