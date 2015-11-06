@@ -1,10 +1,10 @@
 set nocompatible
-filetype plugin indent off 
+filetype plugin indent off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
   call neobundle#begin(expand('~/.vim/bundle'))
-endif 
+endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
@@ -14,12 +14,15 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tomtom/tcomment_vim.git'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'vim-scripts/AnsiEsc.vim'
+NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
 filetype plugin indent on
 
 """"""""""""""""""""
-" Unite Setting
+" Unite
 """"""""""""""""""""
 let g:unite_enable_start_insert=1
 if executable('ag')
@@ -27,21 +30,21 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
-"noremap <C-P> :Unite buffer<CR>
-"noremap <C-N> :Unite -buffer-name=file file<CR>
-"noremap <C-Z> :Unite file_mru<CR>
-"noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
-                                                                                                                                                                                                                                                                                                                              
 
 """"""""""""""""""""
-" Ctrlp Setting
+" Ctrlp
 """"""""""""""""""""
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l'
 endif
 
 """"""""""""""""""""
-" Basic Setting
+" Indent Line
+""""""""""""""""""""
+let g:indentLine_faster = 1
+
+""""""""""""""""""""
+" Basic
 """"""""""""""""""""
 syntax on
 set number
