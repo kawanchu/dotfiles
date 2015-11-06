@@ -17,6 +17,11 @@ NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'Yggdroot/indentLine'
+"NeoBundle 'Flake8-vim'
+"NeoBundle 'davidhalter/jedi-vim'
+"NeoBundle 'hynek/vim-python-pep8-indent'
+"NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'scrooloose/syntastic'
 
 call neobundle#end()
 filetype plugin indent on
@@ -42,6 +47,13 @@ endif
 " Indent Line
 """"""""""""""""""""
 let g:indentLine_faster = 1
+
+""""""""""""""""""""
+" Syntastic
+""""""""""""""""""""
+"let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args="--max-line-length=120"
 
 """"""""""""""""""""
 " Basic
