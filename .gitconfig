@@ -7,3 +7,11 @@
   default = current
 [color]
 	ui = true
+[alias]
+	st = status
+	br = branch
+	ps = push
+	pl = pull
+	co = checkout
+  cm = commit -a -m
+	l = log
