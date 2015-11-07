@@ -47,6 +47,8 @@ endif
 " Indent Line
 """"""""""""""""""""
 let g:indentLine_faster = 1
+"let g:indentLine_color_term = 000
+"let g:indentLine_char = '︙'
 
 """"""""""""""""""""
 " Syntastic
