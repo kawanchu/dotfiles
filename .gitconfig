@@ -8,10 +8,12 @@
 [color]
 	ui = true
 [alias]
-	st = status
-	br = branch
-	ps = push
-	pl = pull
-	co = checkout
+  br = branch
   cm = commit -a -m
-	l = log
+  co = checkout
+  df = diff
+  l = log
+  pr = pull-request
+  ps = push
+  pl = pull
+  st = status

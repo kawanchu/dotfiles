@@ -33,6 +33,9 @@ setopt extended_glob
 setopt no_flow_control
 setopt interactive_comments
 
+# ALIAS
+alias g='git'
+
 # ENV
 ## rbenv
 if [ -d "$HOME/.rbenv" ]; then
