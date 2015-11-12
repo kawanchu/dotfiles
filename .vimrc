@@ -1,30 +1,32 @@
-set nocompatible
-filetype plugin indent off
+if 1
+  set nocompatible
+  filetype plugin indent off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle'))
+  if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+    call neobundle#begin(expand('~/.vim/bundle'))
+  endif
+
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'altercation/vim-colors-solarized'
+  NeoBundle 'rking/ag.vim'
+  NeoBundle 'ctrlpvim/ctrlp.vim'
+  NeoBundle 'tomtom/tcomment_vim.git'
+  NeoBundle 'bronson/vim-trailing-whitespace'
+  NeoBundle 'vim-scripts/AnsiEsc.vim'
+  NeoBundle 'Yggdroot/indentLine'
+  "NeoBundle 'Flake8-vim'
+  "NeoBundle 'davidhalter/jedi-vim'
+  "NeoBundle 'hynek/vim-python-pep8-indent'
+  "NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'scrooloose/syntastic'
+
+  call neobundle#end()
+  filetype plugin indent on
 endif
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'tomtom/tcomment_vim.git'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'vim-scripts/AnsiEsc.vim'
-NeoBundle 'Yggdroot/indentLine'
-"NeoBundle 'Flake8-vim'
-"NeoBundle 'davidhalter/jedi-vim'
-"NeoBundle 'hynek/vim-python-pep8-indent'
-"NeoBundle 'Townk/vim-autoclose'
-NeoBundle 'scrooloose/syntastic'
-
-call neobundle#end()
-filetype plugin indent on
 
 """"""""""""""""""""
 " Unite

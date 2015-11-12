@@ -35,6 +35,7 @@ setopt interactive_comments
 
 # ALIAS
 alias g='git'
+alias vi='vim'
 
 # ENV
 ## rbenv
