@@ -8,6 +8,19 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 autoload -U colors
 colors
 
+## dircolors
+export LS_COLORS
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(dircolors ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    fi
+fi
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
+
 ## history
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
@@ -23,7 +36,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 ## prompt
-PROMPT="[%n@%m]%  %~
+PROMPT="${fg[blue]}[%n@%m]%  ${reset_color}%~
 %# "
 
 ## others

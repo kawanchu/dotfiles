@@ -75,3 +75,6 @@ autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set autoindent
 set smartindent
 set clipboard=unnamed
+"set foldmethod=indent
+"set foldlevel=1
+"set foldcolumn=2
