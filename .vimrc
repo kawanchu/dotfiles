@@ -10,6 +10,9 @@ if 1
   NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'marcus/rsense'
+  NeoBundle 'supermomonga/neocomplete-rsense.vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'rking/ag.vim'
@@ -23,6 +26,10 @@ if 1
   "NeoBundle 'hynek/vim-python-pep8-indent'
   "NeoBundle 'Townk/vim-autoclose'
   NeoBundle 'scrooloose/syntastic'
+  "NeoBundle 'tpope/vim-haml'
+  NeoBundle 'szw/vim-tags'
+  NeoBundle 'tpope/vim-endwise'
+  NeoBundle 'tpope/vim-rails'
 
   call neobundle#end()
   filetype plugin indent on
@@ -58,6 +65,25 @@ let g:indentLine_faster = 1
 "let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=120"
+
+""""""""""""""""""""
+" Rsense
+""""""""""""""""""""
+if isdirectory('/usr/local/lib/rsense-0.3')
+  let g:rsenseHome = '/usr/local/lib/rsense-0.3'
+  let g:rsenseUseOmniFunc = 1
+endif
+
+""""""""""""""""""""
+" neocomplete
+""""""""""""""""""""
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 """"""""""""""""""""
 " Basic
