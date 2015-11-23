@@ -31,9 +31,7 @@ if 1
   filetype plugin indent on
 endif
 
-""""""""""""""""""""
 " Unite
-""""""""""""""""""""
 let g:unite_enable_start_insert=1
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
@@ -41,36 +39,28 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-""""""""""""""""""""
 " Ctrlp
-""""""""""""""""""""
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l'
 endif
 
-""""""""""""""""""""
+" NERDTree
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
 " Indent Line
-""""""""""""""""""""
 let g:indentLine_color_term = 000
 
-
-""""""""""""""""""""
 " Syntastic
-""""""""""""""""""""
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=120"
 
-""""""""""""""""""""
 " Rsense
-""""""""""""""""""""
 if isdirectory('/usr/local/lib/rsense-0.3')
   let g:rsenseHome = '/usr/local/lib/rsense-0.3'
   let g:rsenseUseOmniFunc = 1
 endif
 
-""""""""""""""""""""
 " neocomplete
-""""""""""""""""""""
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -79,9 +69,7 @@ if !exists('g:neocomplete#force_omni_input_patterns')
 endif
 let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
-""""""""""""""""""""
 " Basic
-""""""""""""""""""""
 syntax on
 set number
 set ruler
@@ -95,6 +83,3 @@ autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set autoindent
 set smartindent
 set clipboard=unnamed
-"set foldmethod=indent
-"set foldlevel=1
-"set foldcolumn=2
