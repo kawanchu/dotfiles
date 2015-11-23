@@ -63,6 +63,11 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 
+if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
+  eval "$(pyenv virtualenv-init -)"
+  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+fi
+
 ## hub
 if [ -f /usr/local/bin/hub ]; then
   eval "$(hub alias -s)"
