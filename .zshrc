@@ -57,9 +57,10 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
-## anaconda3
-if [ -d "$HOME/anaconda3" ]; then
-  export PATH="$HOME/anaconda3/bin:$PATH"
+## python
+if [ -d "$HOME/.pyenv" ]; then
+  export PATH=~/.pyenv/bin:$PATH
+  eval "$(pyenv init -)"
 fi
 
 ## hub

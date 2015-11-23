@@ -21,12 +21,8 @@ if 1
   NeoBundle 'bronson/vim-trailing-whitespace'
   NeoBundle 'vim-scripts/AnsiEsc.vim'
   NeoBundle 'Yggdroot/indentLine'
-  "NeoBundle 'Flake8-vim'
-  "NeoBundle 'davidhalter/jedi-vim'
-  "NeoBundle 'hynek/vim-python-pep8-indent'
-  "NeoBundle 'Townk/vim-autoclose'
   NeoBundle 'scrooloose/syntastic'
-  "NeoBundle 'tpope/vim-haml'
+  NeoBundle 'tpope/vim-haml'
   NeoBundle 'szw/vim-tags'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-rails'
@@ -55,14 +51,12 @@ endif
 """"""""""""""""""""
 " Indent Line
 """"""""""""""""""""
-let g:indentLine_faster = 1
-"let g:indentLine_color_term = 000
-"let g:indentLine_char = '︙'
+let g:indentLine_color_term = 000
+
 
 """"""""""""""""""""
 " Syntastic
 """"""""""""""""""""
-"let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=120"
 
