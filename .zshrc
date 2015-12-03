@@ -73,6 +73,11 @@ if [ -f /usr/local/bin/hub ]; then
   eval "$(hub alias -s)"
 fi
 
+## heroku
+if [ -d "/usr/local/heroku" ]; then
+  export PATH=/usr/local/heroku/bin:$PATH
+fi
+
 ## local settings
 if [ -f "$HOME/.zshrc_local" ]; then
     source "$HOME/.zshrc_local"
