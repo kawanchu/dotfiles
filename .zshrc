@@ -78,6 +78,12 @@ if [ -d "/usr/local/heroku" ]; then
   export PATH=/usr/local/heroku/bin:$PATH
 fi
 
+## nvm
+if [ -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+fi
+
 ## local settings
 if [ -f "$HOME/.zshrc_local" ]; then
     source "$HOME/.zshrc_local"
