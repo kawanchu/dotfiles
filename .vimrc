@@ -81,5 +81,5 @@ autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set autoindent
 set smartindent
-set clipboard=unname
+set clipboard=unnamed
 set mouse=a
