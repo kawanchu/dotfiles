@@ -53,13 +53,13 @@ alias vi='vim'
 # ENV
 ## rbenv
 if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
+  export PATH=$HOME/.rbenv/bin:$PATH
   eval "$(rbenv init -)"
 fi
 
 ## python
 if [ -d "$HOME/.pyenv" ]; then
-  export PATH=~/.pyenv/bin:$PATH
+  export PATH=$HOME/.pyenv/bin:$PATH
   eval "$(pyenv init -)"
 fi
 
