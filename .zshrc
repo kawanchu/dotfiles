@@ -36,7 +36,7 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 
 ## prompt
-PROMPT="${fg[blue]}[%n@%m]%  ${reset_color}%~
+PROMPT="${fg[white]}[%n@%m]%  ${reset_color}%~
 %# "
 
 ## others
