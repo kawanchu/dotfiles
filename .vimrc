@@ -28,6 +28,7 @@ if 1
   NeoBundle 'tpope/vim-rails'
   NeoBundle 'slim-template/vim-slim'
   NeoBundle 'derekwyatt/vim-scala'
+  NeoBundle 'kchmck/vim-coffee-script'
 
   call neobundle#end()
   filetype plugin indent on
