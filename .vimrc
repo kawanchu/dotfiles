@@ -22,6 +22,7 @@ if 1
   NeoBundle 'vim-scripts/AnsiEsc.vim'
   NeoBundle 'Yggdroot/indentLine'
   NeoBundle 'scrooloose/syntastic'
+  NeoBundle 'tell-k/vim-autopep8'
   NeoBundle 'tpope/vim-haml'
   NeoBundle 'szw/vim-tags'
   NeoBundle 'tpope/vim-endwise'
