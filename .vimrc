@@ -8,7 +8,7 @@ if 1
   endif
 
   NeoBundleFetch 'Shougo/neobundle.vim'
-  NeoBundle 'Shougo/unite.vim'
+  " NeoBundle 'Shougo/unite.vim'
   " NeoBundle 'Shougo/neomru.vim'
   " NeoBundle 'Shougo/neocomplete.vim'
   " NeoBundle 'marcus/rsense'
@@ -24,7 +24,7 @@ if 1
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'tell-k/vim-autopep8'
   NeoBundle 'tpope/vim-haml'
-  NeoBundle 'szw/vim-tags'
+  " NeoBundle 'szw/vim-tags'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-rails'
   NeoBundle 'slim-template/vim-slim'
@@ -36,12 +36,12 @@ if 1
 endif
 
 " Unite
-let g:unite_enable_start_insert=1
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
+" let g:unite_enable_start_insert=1
+" if executable('ag')
+"   let g:unite_source_grep_command = 'ag'
+"   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+"   let g:unite_source_grep_recursive_opt = ''
+" endif
 
 " Ctrlp
 " if executable('ag')
