@@ -27,7 +27,7 @@ if 1
   " NeoBundle 'szw/vim-tags'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-rails'
-  NeoBundle 'ngmy/vim-rubocop'
+  " NeoBundle 'ngmy/vim-rubocop'
   NeoBundle 'slim-template/vim-slim'
   NeoBundle 'derekwyatt/vim-scala'
   NeoBundle 'kchmck/vim-coffee-script'
