@@ -27,6 +27,7 @@ if 1
   " NeoBundle 'szw/vim-tags'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-rails'
+  NeoBundle 'ngmy/vim-rubocop'
   NeoBundle 'slim-template/vim-slim'
   NeoBundle 'derekwyatt/vim-scala'
   NeoBundle 'kchmck/vim-coffee-script'
@@ -54,6 +55,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " Syntastic
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=120"
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
 
 " Rsense
 " if isdirectory('/usr/local/lib/rsense-0.3')
