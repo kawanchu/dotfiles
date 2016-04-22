@@ -53,13 +53,14 @@ alias vi='vim'
 # ENV
 ## rbenv
 if [ -d "$HOME/.rbenv" ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
+  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
 ## python
 if [ -d "$HOME/.pyenv" ]; then
-  export PATH=$HOME/.pyenv/bin:$PATH
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -75,7 +76,7 @@ fi
 
 ## heroku
 if [ -d "/usr/local/heroku" ]; then
-  export PATH=/usr/local/heroku/bin:$PATH
+  export PATH="/usr/local/heroku/bin:$PATH"
 fi
 
 ## nvm
