@@ -69,6 +69,12 @@ if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 
+## go
+if [ -d "$HOME/.go" ]; then
+  export GOPATH="$HOME/.go"
+  export PATH="$GOPATH/bin:$PATH"
+fi
+
 ## hub
 if [ -f /usr/local/bin/hub ]; then
   eval "$(hub alias -s)"
