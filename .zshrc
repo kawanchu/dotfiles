@@ -97,6 +97,6 @@ if [ -f "$HOME/.zshrc_local" ]; then
 fi
 
 ## google app engine
-if [ -d "$HOME/.google_appengine" ]; then
-  export PATH=$PATH:"$HOME/.google_appengine"
+if [ -d "/usr/local/google_appengine" ]; then
+  export PATH=$PATH:/usr/local/google_appengine
 fi
