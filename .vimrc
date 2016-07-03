@@ -31,10 +31,18 @@ if 1
   NeoBundle 'slim-template/vim-slim'
   NeoBundle 'derekwyatt/vim-scala'
   NeoBundle 'kchmck/vim-coffee-script'
+  NeoBundle 'fatih/vim-go'
+  NeoBundle 'pangloss/vim-javascript'
+  NeoBundle 'mxw/vim-jsx'
+  NeoBundle 'othree/yajs.vim'
 
   call neobundle#end()
   filetype plugin indent on
 endif
+
+
+" js
+let g:jsx_ext_required = 0
 
 " Unite
 " let g:unite_enable_start_insert=1
@@ -83,6 +91,7 @@ set shiftwidth=2
 set softtabstop=2
 autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set autoindent
 set smartindent
 set clipboard=unnamed

@@ -93,5 +93,10 @@ fi
 
 ## local settings
 if [ -f "$HOME/.zshrc_local" ]; then
-    source "$HOME/.zshrc_local"
+  source "$HOME/.zshrc_local"
+fi
+
+## google app engine
+if [ -d "$HOME/.google_appengine" ]; then
+  export PATH=$PATH:"$HOME/.google_appengine"
 fi
