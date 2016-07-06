@@ -91,6 +91,11 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 fi
 
+## torch
+if [ -d "$HOME/torch" ]; then
+  . $HOME/torch/install/bin/torch-activate
+fi
+
 ## local settings
 if [ -f "$HOME/.zshrc_local" ]; then
   source "$HOME/.zshrc_local"
@@ -100,3 +105,4 @@ fi
 if [ -d "/usr/local/google_appengine" ]; then
   export PATH=$PATH:/usr/local/google_appengine
 fi
+
