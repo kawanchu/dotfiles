@@ -70,7 +70,7 @@ if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
 fi
 
 ## gvm
-[[ -s "/home/hoge/.gvm/scripts/gvm" ]] && source "/home/hoge/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 ## go
 if [ -d "$HOME/.go" ]; then
@@ -79,14 +79,10 @@ if [ -d "$HOME/.go" ]; then
 fi
 
 ## hub
-if [ -f /usr/local/bin/hub ]; then
-  eval "$(hub alias -s)"
-fi
+[ -f /usr/local/bin/hub ] && eval "$(hub alias -s)"
 
 ## heroku
-if [ -d "/usr/local/heroku" ]; then
-  export PATH="/usr/local/heroku/bin:$PATH"
-fi
+[ -d "/usr/local/heroku" ] && export PATH="/usr/local/heroku/bin:$PATH"
 
 ## nvm
 if [ -d "$HOME/.nvm" ]; then
@@ -95,17 +91,10 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 
 ## torch
-if [ -d "$HOME/torch" ]; then
-  . $HOME/torch/install/bin/torch-activate
-fi
+[ -d "$HOME/torch" ] && . $HOME/torch/install/bin/torch-activate
 
 ## local settings
-if [ -f "$HOME/.zshrc_local" ]; then
-  source "$HOME/.zshrc_local"
-fi
+[ -f "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
 
 ## google app engine
-if [ -d "/usr/local/google_appengine" ]; then
-  export PATH=$PATH:/usr/local/google_appengine
-fi
-
+[ -d "/usr/local/google_appengine" ] && export PATH=$PATH:/usr/local/google_appengine
