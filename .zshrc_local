@@ -1,0 +1,3 @@
+## override prompt
+PROMPT="${fg[cyan]}[%n@%m]%  ${reset_color}%~
+%# "
