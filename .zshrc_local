@@ -1,3 +1,6 @@
+## alias
+alias ll="ls -l"
+
 ## override prompt
 PROMPT="${fg[cyan]}[%n@%m]%  ${reset_color}%~
 %# "
