@@ -94,6 +94,6 @@ autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set autoindent
 set smartindent
-set clipboard=unnamed
+set clipboard=unnamedplus
 set mouse=a
 set backspace=indent,eol,start
