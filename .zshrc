@@ -98,3 +98,6 @@ fi
 
 ## google app engine
 [ -d "/usr/local/google_appengine" ] && export PATH=$PATH:/usr/local/google_appengine
+
+## OpenFst
+[ -d "/vagrant/kaldi/tools/openfst" ] && export PATH=$PATH:/vagrant/kaldi/tools/openfst/bin
