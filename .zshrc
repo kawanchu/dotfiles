@@ -101,3 +101,6 @@ fi
 
 ## OpenFst
 [ -d "/vagrant/kaldi/tools/openfst" ] && export PATH=$PATH:/vagrant/kaldi/tools/openfst/bin
+
+## ssh
+[ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
