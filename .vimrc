@@ -62,7 +62,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Syntastic
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args="--max-line-length=120"
+let g:syntastic_python_flake8_args="--max-line-length=99"
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
 
 " Rsense
@@ -97,3 +97,6 @@ set smartindent
 set clipboard=unnamedplus
 set mouse=a
 set backspace=indent,eol,start
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
