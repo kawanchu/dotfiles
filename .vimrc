@@ -16,7 +16,7 @@ if 1
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'rking/ag.vim'
-  " NeoBundle 'ctrlpvim/ctrlp.vim'
+  NeoBundle 'ctrlpvim/ctrlp.vim'
   NeoBundle 'tomtom/tcomment_vim.git'
   NeoBundle 'bronson/vim-trailing-whitespace'
   NeoBundle 'vim-scripts/AnsiEsc.vim'
