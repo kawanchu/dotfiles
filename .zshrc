@@ -1,6 +1,6 @@
 # SETTING
 ## umask
-umask 0002
+umask 002
 
 ## complement
 autoload -U compinit
