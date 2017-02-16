@@ -107,3 +107,9 @@ fi
 
 ## ssh
 [ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
+
+###-tns-completion-start-###
+if [ -f /home/vagrant/.tnsrc ]; then 
+    source /home/vagrant/.tnsrc 
+fi
+###-tns-completion-end-###

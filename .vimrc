@@ -81,6 +81,7 @@ let g:syntastic_ruby_checkers=['rubocop', 'mri']
 " let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 " Basic
+imap <C-j> <esc>
 syntax on
 set number
 set ruler
@@ -92,6 +93,7 @@ set softtabstop=2
 autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 set autoindent
 set smartindent
 set clipboard=unnamedplus
