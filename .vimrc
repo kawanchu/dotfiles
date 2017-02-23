@@ -8,7 +8,7 @@ if 1
   endif
 
   NeoBundleFetch 'Shougo/neobundle.vim'
-  " NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/unite.vim'
   " NeoBundle 'Shougo/neomru.vim'
   " NeoBundle 'Shougo/neocomplete.vim'
   " NeoBundle 'marcus/rsense'
@@ -35,6 +35,7 @@ if 1
   NeoBundle 'pangloss/vim-javascript'
   NeoBundle 'mxw/vim-jsx'
   NeoBundle 'othree/yajs.vim'
+  NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 
   call neobundle#end()
   filetype plugin indent on
@@ -45,17 +46,17 @@ endif
 let g:jsx_ext_required = 0
 
 " Unite
-" let g:unite_enable_start_insert=1
-" if executable('ag')
-"   let g:unite_source_grep_command = 'ag'
-"   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-"   let g:unite_source_grep_recursive_opt = ''
-" endif
+let g:unite_enable_start_insert=1
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " Ctrlp
-" if executable('ag')
-"   let g:ctrlp_user_command = 'ag %s -l'
-" endif
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l'
+endif
 
 " NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
@@ -64,6 +65,12 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args="--max-line-length=99"
 let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_enable_signs = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Rsense
 " if isdirectory('/usr/local/lib/rsense-0.3')
@@ -82,6 +89,7 @@ let g:syntastic_ruby_checkers=['rubocop', 'mri']
 
 " Basic
 imap <C-j> <esc>
+noremap! <C-j> <esc>
 syntax on
 set number
 set ruler
