@@ -16,6 +16,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'wavded/vim-stylus'
@@ -37,7 +38,8 @@ endif
 
 " Ctrlp
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l'
+  let g:ctrlp_use_caching = 0
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup -g ""'
 endif
 
 " NERDTree
