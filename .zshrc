@@ -99,8 +99,8 @@ fi
 ## local settings
 [ -f "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
 
-## google app engine
-[ -d "/usr/local/google_appengine" ] && export PATH=$PATH:/usr/local/google_appengine
+## go_appengine
+[ -d "$HOME/.go_appengine" ] && export PATH=$PATH:$HOME/.go_appengine
 
 ## OpenFst
 [ -d "/vagrant/kaldi/tools/openfst" ] && export PATH=$PATH:/vagrant/kaldi/tools/openfst/bin
@@ -108,8 +108,7 @@ fi
 ## ssh
 [ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
 
-###-tns-completion-start-###
-if [ -f /home/vagrant/.tnsrc ]; then 
-    source /home/vagrant/.tnsrc 
+## tns-completion-start
+if [ -f /home/vagrant/.tnsrc ]; then
+    source /home/vagrant/.tnsrc
 fi
-###-tns-completion-end-###

@@ -7,8 +7,12 @@ if has('vim_starting')
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+" NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'posva/vim-vue'
@@ -18,8 +22,12 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/AnsiEsc.vim'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'Yggdroot/indentLine'
 
 call neobundle#end()
@@ -55,10 +63,14 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+if executable('rubocop')
+  let g:syntastic_ruby_checkers = ['rubocop']
+endif
 
 " Basic
-syntax on
+syntax enable
 set autoindent
+set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set cursorline
@@ -75,3 +87,4 @@ set tabstop=2
 autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+colorscheme solarized
