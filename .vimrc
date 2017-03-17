@@ -8,11 +8,9 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-" NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'posva/vim-vue'
@@ -67,10 +65,12 @@ if executable('rubocop')
   let g:syntastic_ruby_checkers = ['rubocop']
 endif
 
+" Color
+colorscheme default
+
 " Basic
-syntax enable
+syntax on
 set autoindent
-set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set cursorline
@@ -87,4 +87,3 @@ set tabstop=2
 autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
-colorscheme solarized
