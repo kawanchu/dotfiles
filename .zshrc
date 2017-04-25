@@ -60,6 +60,9 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+## rvm
+[ -d $HOME/.rvm ] && export PATH=$PATH:$HOME/.rvm/bin
+
 ## python
 if [ -d "$HOME/.pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
