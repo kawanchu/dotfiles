@@ -9,6 +9,7 @@
   default = current
 [color]
   ui = true
+  excludesfile = ~/.gitignore_global
 [alias]
   a = add
   br = branch
