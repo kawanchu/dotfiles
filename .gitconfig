@@ -9,7 +9,6 @@
   default = current
 [color]
   ui = true
-  excludesfile = ~/.gitignore_global
 [alias]
   a = add
   br = branch
@@ -23,3 +22,5 @@
   st = status
 [merge]
 	tool = vimdiff
+[core]
+	excludesfile = ~/.gitignore_global
