@@ -88,3 +88,4 @@ set tabstop=2
 autocmd! FileType perl setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd! FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4
+au BufRead,BufNewFile *.rabl setf ruby
