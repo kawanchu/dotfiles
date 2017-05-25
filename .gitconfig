@@ -12,6 +12,7 @@
 [alias]
   a = add
   br = branch
+  cl = clone
   cm = commit -a -m
   co = checkout
   df = diff
