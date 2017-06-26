@@ -13,11 +13,11 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 NeoBundle 'posva/vim-vue'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sekel/vim-vue-syntastic'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tomtom/tcomment_vim'
@@ -55,8 +55,17 @@ let NERDTreeShowHidden=1
 
 " Syntastic
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args="--max-line-length=99"
-let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_python_flake8_args = "--max-line-length=99"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_vue_checkers = ['eslint']
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+  let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+  let g:syntastic_javascript_eslint_exec = local_eslint
+  let g:syntastic_vue_eslint_exec = local_eslint
+endif
 let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0

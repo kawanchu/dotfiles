@@ -84,6 +84,13 @@ if [ -d "$HOME/.go" ]; then
   export PATH="$GOPATH/bin:$PATH"
 fi
 
+## jenv
+if [ -d $HOME/.jenv ]; then
+  export JENV_ROOT=$HOME/.jenv
+  export PATH=$JENV_ROOT/bin:$PATH
+  eval "$(jenv init -)"
+fi
+
 ## hub
 [ -f /usr/local/bin/hub ] && eval "$(hub alias -s)"
 
