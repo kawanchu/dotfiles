@@ -25,3 +25,5 @@
 	tool = vimdiff
 [core]
 	excludesfile = ~/.gitignore_global
+	precomposeunicode = true
+	quotepath = false
