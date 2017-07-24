@@ -54,6 +54,10 @@ alias g='git'
 alias vi='vim'
 
 # ENV
+## ssh-agent
+eval "$(ssh-agent)" > /dev/null 2>&1
+ssh-add ~/.ssh/id_rsa >/dev/null 2>&1
+
 ## rbenv
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
