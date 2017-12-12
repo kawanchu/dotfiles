@@ -8,6 +8,7 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
@@ -76,7 +77,7 @@ if executable('rubocop')
 endif
 
 " Color
-colorscheme default
+colorscheme solarized
 
 " Basic
 syntax on
