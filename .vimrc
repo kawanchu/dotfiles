@@ -77,6 +77,7 @@ if executable('rubocop')
 endif
 
 " Color
+set background=dark
 colorscheme solarized
 
 " Basic
