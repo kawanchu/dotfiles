@@ -20,6 +20,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'tomasr/molokai'
 NeoBundle 'tomlion/vim-solidity'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
@@ -77,8 +78,9 @@ if executable('rubocop')
 endif
 
 " Color
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
+let g:molokai_original = 1
 
 " Basic
 syntax on
