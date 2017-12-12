@@ -80,6 +80,7 @@ endif
 " Color
 " set background=dark
 " colorscheme solarized
+colorscheme molokai
 let g:molokai_original = 1
 
 " Basic
