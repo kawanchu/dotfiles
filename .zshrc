@@ -1,4 +1,7 @@
 # SETTING
+## local settings
+[ -f "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
+
 ## umask
 umask 002
 
@@ -101,9 +104,6 @@ fi
 
 ## torch
 [ -d "$HOME/torch" ] && . $HOME/torch/install/bin/torch-activate
-
-## local settings
-[ -f "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
 
 ## go_appengine
 [ -d "$HOME/.go_appengine" ] && export PATH=$PATH:$HOME/.go_appengine
