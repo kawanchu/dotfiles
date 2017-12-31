@@ -1,7 +1,7 @@
-# SETTING
-## local settings
-[ -f "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
+# LOCAL 
+[ -f "$HOME/.zshrc_local_top" ] && source "$HOME/.zshrc_local_top"
 
+# SETTING
 ## umask
 umask 002
 
@@ -118,3 +118,6 @@ fi
 if [ -f /home/vagrant/.tnsrc ]; then
     source /home/vagrant/.tnsrc
 fi
+
+# LOCAL
+[ -f "$HOME/.zshrc_local_bottom" ] && source "$HOME/.zshrc_local_bottom"

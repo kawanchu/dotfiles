@@ -14,7 +14,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'digitaltoad/vim-pug'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'MaxMEllon/vim-jsx-pretty'
+" NeoBundle 'MaxMEllon/vim-jsx-pretty'
 " NeoBundle 'mxw/vim-jsx'
 NeoBundle 'neoclide/vim-jsx-improve'
 NeoBundle 'posva/vim-vue'
@@ -78,7 +78,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-if executable('rubocop')
+if filereadable('.rubocop.yml')
   let g:syntastic_ruby_checkers = ['rubocop']
 endif
 
