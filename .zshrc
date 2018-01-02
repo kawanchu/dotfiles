@@ -1,4 +1,4 @@
-# LOCAL 
+# LOCAL
 [ -f "$HOME/.zshrc_local_top" ] && source "$HOME/.zshrc_local_top"
 
 # SETTING
@@ -47,11 +47,18 @@ setopt interactive_comments
 # ALIAS
 alias g='git'
 alias vi='vim'
+alias rr='bundle exec rails'
 
 # ENV
 ## ssh-agent
 eval "$(ssh-agent)" > /dev/null 2>&1
 ssh-add ~/.ssh/id_rsa >/dev/null 2>&1
+
+## anyenv
+if [ -d $HOME/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+fi
 
 ## rbenv
 if [ -d "$HOME/.rbenv" ]; then
