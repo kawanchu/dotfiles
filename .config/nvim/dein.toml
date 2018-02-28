@@ -1,0 +1,90 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+hook_add = '''
+  set background=dark
+  autocmd VimEnter * nested colorscheme solarized
+'''
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  if executable('ag')
+    let g:ctrlp_use_caching = 0
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup -g ""'
+  endif
+'''
+
+[[plugins]]
+repo = 'digitaltoad/vim-pug'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+hook_add = '''
+  autocmd FileType vue syntax sync fromstart
+'''
+
+[[plugins]]
+repo = 'rking/ag.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  let NERDTreeShowHidden = 1
+'''
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  let g:airline_theme='solarized'
+'''
+
+[[plugins]]
+repo = 'vim-scripts/AnsiEsc.vim'
+
+[[plugins]]
+repo = 'wavded/vim-stylus'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+  let g:ale_emit_conflict_warnings = 0
+  let g:ale_lint_on_text_changed = 0
+  " let g:ale_sign_column_always = 1
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_faster = 1
+'''
