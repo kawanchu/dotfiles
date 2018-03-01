@@ -1,25 +1,22 @@
-# LOCAL
+# local
 [ -f "$HOME/.zshrc_local_top" ] && source "$HOME/.zshrc_local_top"
 
-# SETTING
-## umask
+# umask
 umask 002
 
-## complement
+# complement
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-## color
+# color
 autoload -U colors
 colors
 
-## dircolors
-if [ -f ~/.dircolors ]; then
-  eval $(dircolors ~/.dircolors)
-fi
+# dircolors
+[ -f ~/.dircolors ] && eval $(dircolors ~/.dircolors)
 
-## history
+# history
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
 SAVEHIST=100000
@@ -28,34 +25,34 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
 
-## cd
+# cd
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
-## prompt
+# prompt
 PROMPT="${fg[white]}[%n@%m]%  ${reset_color}%~
 %# "
 
-## others
+# others
 setopt no_beep
 setopt print_eight_bit
 setopt extended_glob
 setopt no_flow_control
 setopt interactive_comments
 
-# ALIAS
+# alias
 alias g='git'
 alias vi='vim'
 alias rr='bundle exec rails'
 
-# ENV
-## ssh-agent
+# ssh
 eval "$(ssh-agent)" > /dev/null 2>&1
 ssh-add ~/.ssh/id_rsa >/dev/null 2>&1
+[ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
 
-## anyenv
-if [ -d $HOME/.anyenv ] ; then
+# anyenv
+if [ -d "$HOME/.anyenv" ] ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
   for D in `\ls $HOME/.anyenv/envs`
@@ -64,19 +61,18 @@ if [ -d $HOME/.anyenv ] ; then
   done
 fi
 
-## rbenv
+# rbenv
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
-## rvm
-[ -d $HOME/.rvm ] && export PATH=$PATH:$HOME/.rvm/bin
+# rvm
+[ -d "$HOME/.rvm" ] && export PATH="$HOME/.rvm/bin:$PATH"
 
-## python
+# pyenv
 if [ -d "$HOME/.pyenv" ]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -85,50 +81,45 @@ if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 
-## gvm
+# gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
-## go
+# gopath
 if [ -d "$HOME/.go" ]; then
   export GOPATH="$HOME/.go"
   export PATH="$GOPATH/bin:$PATH"
 fi
 
-## jenv
-if [ -d $HOME/.jenv ]; then
-  export JENV_ROOT=$HOME/.jenv
-  export PATH=$JENV_ROOT/bin:$PATH
+# jenv
+if [ -d "$HOME/.jenv" ]; then
+  export JENV_ROOT="$HOME/.jenv"
+  export PATH="$JENV_ROOT/bin:$PATH"
   eval "$(jenv init -)"
 fi
 
-## hub
-[ -f /usr/local/bin/hub ] && eval "$(hub alias -s)"
-
-## heroku
-[ -d "/usr/local/heroku" ] && export PATH="/usr/local/heroku/bin:$PATH"
-
-## nvm
+# nvm
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 fi
 
-## torch
+# hub
+[ -f /usr/local/bin/hub ] && eval "$(hub alias -s)"
+
+# heroku
+[ -d "/usr/local/heroku" ] && export PATH="/usr/local/heroku/bin:$PATH"
+
+# torch
 [ -d "$HOME/torch" ] && . $HOME/torch/install/bin/torch-activate
 
-## go_appengine
-[ -d "$HOME/.go_appengine" ] && export PATH=$PATH:$HOME/.go_appengine
+# go_appengine
+[ -d "$HOME/.go_appengine" ] && export PATH="$HOME/.go_appengine:$PATH"
 
-## OpenFst
-[ -d "/vagrant/kaldi/tools/openfst" ] && export PATH=$PATH:/vagrant/kaldi/tools/openfst/bin
+# OpenFst
+[ -d "/vagrant/kaldi/tools/openfst" ] && export PATH="/vagrant/kaldi/tools/openfst/bin:$PATH"
 
-## ssh
-[ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
+# tns-completion-start
+[ -f /home/vagrant/.tnsrc ] && source /home/vagrant/.tnsrc
 
-## tns-completion-start
-if [ -f /home/vagrant/.tnsrc ]; then
-    source /home/vagrant/.tnsrc
-fi
-
-# LOCAL
+# local
 [ -f "$HOME/.zshrc_local_bottom" ] && source "$HOME/.zshrc_local_bottom"
