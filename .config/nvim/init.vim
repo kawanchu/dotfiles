@@ -23,7 +23,10 @@ endif
 
 set autoindent
 set cursorline
+set cursorcolumn
 set expandtab
+set nobackup
+set noswapfile
 set number
 set ruler
 set shiftwidth=2

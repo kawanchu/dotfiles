@@ -43,12 +43,13 @@ setopt interactive_comments
 
 # alias
 alias g='git'
-alias vi='vim'
 alias rr='bundle exec rails'
+alias vi='vim'
+type nvim > /dev/null 2>&1  && alias vim='nvim'
 
 # ssh
 eval "$(ssh-agent)" > /dev/null 2>&1
-ssh-add ~/.ssh/id_rsa >/dev/null 2>&1
+ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
 [ -d "$HOME/.ssh/conf.d" ] && alias ssh="cat $HOME/.ssh/conf.d/*.config > $HOME/.ssh/config;ssh"
 
 # anyenv
