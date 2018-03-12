@@ -30,6 +30,9 @@ hook_add = '''
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
 
+# [[plugins]]
+# repo = 'edkolev/tmuxline.vim'
+
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
@@ -60,13 +63,28 @@ repo = 'Shougo/context_filetype.vim'
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
-repo = 'tpope/vim-surround'
+repo = 'tpope/vim-endwise'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-endwise'
+repo = 'tpope/vim-markdown'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+  nmap <Space>m <Plug>(quickhl-manual-this)
+  xmap <Space>m <Plug>(quickhl-manual-this)
+  nmap <Space>M <Plug>(quickhl-manual-reset)
+  xmap <Space>M <Plug>(quickhl-manual-reset)
+'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
