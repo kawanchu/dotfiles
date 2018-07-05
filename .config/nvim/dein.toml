@@ -60,6 +60,9 @@ repo = 'scrooloose/syntastic'
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
+repo = 'tomlion/vim-solidity'
+
+[[plugins]]
 repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
