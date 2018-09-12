@@ -25,6 +25,7 @@ set autoindent
 set cursorline
 set cursorcolumn
 set expandtab
+set fenc=utf-8
 set nobackup
 set noswapfile
 set number
