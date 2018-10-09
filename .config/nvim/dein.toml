@@ -30,6 +30,9 @@ hook_add = '''
 [[plugins]]
 repo = 'digitaltoad/vim-pug'
 
+[[plugins]]
+repo = 'fatih/vim-go'
+
 # [[plugins]]
 # repo = 'edkolev/tmuxline.vim'
 
