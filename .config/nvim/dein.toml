@@ -32,6 +32,7 @@ repo = 'digitaltoad/vim-pug'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+on_ft = 'go'
 
 # [[plugins]]
 # repo = 'edkolev/tmuxline.vim'
@@ -45,6 +46,7 @@ repo = 'posva/vim-vue'
 hook_add = '''
   autocmd FileType vue syntax sync fromstart
 '''
+on_ft = 'vue'
 
 [[plugins]]
 repo = 'rking/ag.vim'
@@ -64,6 +66,7 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'tomlion/vim-solidity'
+on_ft = 'sol'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
@@ -106,6 +109,7 @@ repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
 repo = 'wavded/vim-stylus'
+on_ft = 'styl'
 
 [[plugins]]
 repo = 'w0rp/ale'
