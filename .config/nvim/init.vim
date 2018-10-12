@@ -22,14 +22,23 @@ if dein#check_install()
 endif
 
 set autoindent
+set autoread
 set cursorline
 set cursorcolumn
 set expandtab
 set fenc=utf-8
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
 set nobackup
 set noswapfile
 set number
 set ruler
 set shiftwidth=2
+set showcmd
+set smartcase
 set smartindent
 set tabstop=2
+set virtualedit=onemore
+set wrapscan
