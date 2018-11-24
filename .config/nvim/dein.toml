@@ -34,6 +34,19 @@ repo = 'digitaltoad/vim-pug'
 repo = 'fatih/vim-go'
 on_ft = 'go'
 
+[[plugins]]
+repo = 'kylef/apiblueprint.vim'
+on_ft = 'apiblueprint'
+hooks_add = '''
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+'''
+
 # [[plugins]]
 # repo = 'edkolev/tmuxline.vim'
 
@@ -57,9 +70,6 @@ hook_add = '''
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
   let NERDTreeShowHidden = 1
 '''
-
-[[plugins]]
-repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
@@ -106,6 +116,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'vim-scripts/AnsiEsc.vim'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
 
 [[plugins]]
 repo = 'wavded/vim-stylus'
