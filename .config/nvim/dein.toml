@@ -51,6 +51,13 @@ hooks_add = '''
 # repo = 'edkolev/tmuxline.vim'
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+# hooks_add = '''
+#   let g:syntastic_typescript_tsc_args="--experimentalDecorators"
+#   let g:syntastic_typescript_tsc_fname = ''
+# '''
+
+[[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
 
