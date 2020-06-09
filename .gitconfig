@@ -27,3 +27,5 @@
 	excludesfile = ~/.gitignore_global
 	precomposeunicode = true
 	quotepath = false
+[ghq]
+	root = ~/.ghq
